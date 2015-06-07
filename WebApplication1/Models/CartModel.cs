@@ -11,7 +11,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 db.Carts.Add(cart);
                 db.SaveChanges();
                 return cart.DatePurchased + "został doday do koszyka ";
@@ -29,14 +29,14 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 Cart p = db.Carts.Find(id);
 
                 p.DatePurchased = cart.DatePurchased;
                 p.ClientID = cart.ClientID;
                 p.Amount = cart.Amount;
                 p.IsInCart = cart.IsInCart;
-                p.ProducentID = cart.ProducentID;
+              //  p.ProducentID = cart.ProducentID;
 
                 db.SaveChanges();
                 return cart.DatePurchased + "został zaktualizowany";
@@ -55,7 +55,7 @@ namespace WebApplication1.Models
         {
               try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 Cart cart = db.Carts.Find(id);
 
                 db.Carts.Attach(cart);

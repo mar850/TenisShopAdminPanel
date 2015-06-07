@@ -11,7 +11,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 db.Products.Add(product);
                 db.SaveChanges();
                 return "produkt " + product.Name + " został dodana do bazy danych ";
@@ -29,7 +29,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 Product p = db.Products.Find(id);
 
                 p.Name = product.Name;
@@ -55,7 +55,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 Product product = db.Products.Find(id);
                 db.Products.Attach(product);
                 db.Products.Remove(product);
@@ -76,7 +76,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                using (TenisShopDbEntities db = new TenisShopDbEntities())
+                using (TenisDbEntities db = new TenisDbEntities())
                 {
                     Product product = db.Products.Find(id);
                     return product;
@@ -94,7 +94,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                using (TenisShopDbEntities db = new TenisShopDbEntities())
+                using (TenisDbEntities db = new TenisDbEntities())
                 {
                     List<Product> products = (from x in db.Products select x).ToList();
                     return products;
@@ -112,7 +112,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                using (TenisShopDbEntities db = new TenisShopDbEntities())
+                using (TenisDbEntities db = new TenisDbEntities())
                 {
                     List<Product> products = (from x in db.Products
                                               where x.TypeId == typeId

@@ -19,7 +19,6 @@ namespace WebApplication1.Management
         {
             ProductTypeModel model = new ProductTypeModel();
             ProductType pt = CreateProductTypes();
-            model.InsertProductType(pt);
             info_label.InnerText = model.InsertProductType(pt);
         }
 

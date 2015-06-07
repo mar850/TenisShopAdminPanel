@@ -11,7 +11,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 db.ProductTypes.Add(productType);
                 db.SaveChanges();
                 return "kategoria " + productType.Name + " została dodana do bazy danych ";
@@ -29,7 +29,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 ProductType p = db.ProductTypes.Find(id);
 
                 p.Name = productType.Name;
@@ -51,7 +51,7 @@ namespace WebApplication1.Models
         {
             try
             {
-                TenisShopDbEntities db = new TenisShopDbEntities();
+                TenisDbEntities db = new TenisDbEntities();
                 ProductType product = db.ProductTypes.Find(id);
                 db.ProductTypes.Attach(product);
                 db.ProductTypes.Remove(product);

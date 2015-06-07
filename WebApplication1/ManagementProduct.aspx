@@ -61,7 +61,7 @@
                 <label for="comment">Kategoria</label>
                 <asp:DropDownList ID="DropDownCategoryList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TenisShopDbConnectionString %>" SelectCommand="SELECT * FROM [ProductType]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TenisDbConnectionString %>" SelectCommand="SELECT * FROM [ProductTypes] ORDER BY [Name]"></asp:SqlDataSource>
             
            </div>
             <div class="form-group">

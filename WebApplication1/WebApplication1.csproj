@@ -81,7 +81,7 @@
       <DependentUpon>ManagementProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>TenisDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -123,7 +123,7 @@
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ProductTypeModel.cs" />
     <Compile Include="Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>TenisDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
@@ -133,9 +133,24 @@
       <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>TenisDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TenisDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TenisDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TenisDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TenisDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TenisDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TenisDbModel.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -150,6 +165,7 @@
     </Content>
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -157,6 +173,23 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="master.Master" />
+    <EntityDeploy Include="TenisDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TenisDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="TenisDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TenisDbModel.edmx</DependentUpon>
+      <LastGenOutput>TenisDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TenisDbModel.edmx.diagram">
+      <DependentUpon>TenisDbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="TenisDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TenisDbModel.edmx</DependentUpon>
+      <LastGenOutput>TenisDbModel.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

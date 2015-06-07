@@ -21,3 +21,12 @@ C:\Users\mar850\Documents\Visual Studio 2012\Projects\TenisShop\TenisShopAdminPa
 C:\Users\mar850\Documents\Visual Studio 2012\Projects\TenisShop\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\mar850\Documents\Visual Studio 2012\Projects\TenisShop\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\mar850\Documents\Visual Studio 2012\Projects\TenisShop\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\WebApplication1.dll
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\WebApplication1.pdb
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\EntityFramework.dll
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\EntityFramework.xml
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\marcinszczepanski\Documents\Visual Studio 2012\Projects\TenisShopAdminPanel\WebApplication1\obj\Debug\WebApplication1.pdb
