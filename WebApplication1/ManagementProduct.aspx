@@ -17,7 +17,7 @@
   <div id="main-wrapper">
     <div class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
-        <div class="logo"><h1>Panel Administracyjny TenisShop</h1></div>
+        <div class="logo"><h1> Panel Administracyjny TenisShop</h1></div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -69,8 +69,13 @@
               <textarea class="form-control" runat="server" rows="5" id="comment"></textarea>
             </div>
             <div class="form-group">
-               <label for="exampleInputFile">Wybierz plik</label>
-               <input runat="server" type="file" id="images_files">
+                <label for="comment">Zdjęcie Produktu</label>
+&nbsp;
+               <label for="exampleInputFile">
+                <asp:DropDownList ID="DropDownImagesList" runat="server" Height="29px">
+                </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                <asp:Label ID="error_image_Label" runat="server"></asp:Label>
                 
           </div>
           <button type="submit" class="btn btn-default" runat="server" id="add_product_button">Dodaj</button>

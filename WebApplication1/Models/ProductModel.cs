@@ -14,7 +14,7 @@ namespace WebApplication1.Models
                 TenisDbEntities db = new TenisDbEntities();
                 db.Products.Add(product);
                 db.SaveChanges();
-                return "produkt " + product.Name + " został dodana do bazy danych ";
+                return "produkt " + product.Name + " został dodany do bazy danych ";
             }
             catch (Exception e)
             {
@@ -72,7 +72,7 @@ namespace WebApplication1.Models
 
         }
 
-        private Product GetProduct(int id)
+        public Product GetProduct(int id)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace WebApplication1.Models
             }
         }
 
-        private List<Product> GetAllProduct()
+        public List<Product> GetAllProduct()
         {
             try
             {
@@ -108,7 +108,7 @@ namespace WebApplication1.Models
             }
         }
 
-        private List<Product> GetAllProducts(int typeId)
+        public List<Product> GetAllProducts(int typeId)
         {
             try
             {

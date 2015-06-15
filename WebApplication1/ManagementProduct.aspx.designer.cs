@@ -67,13 +67,22 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea comment;
         
         /// <summary>
-        /// images_files control.
+        /// DropDownImagesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile images_files;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownImagesList;
+        
+        /// <summary>
+        /// error_image_Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error_image_Label;
         
         /// <summary>
         /// add_product_button control.

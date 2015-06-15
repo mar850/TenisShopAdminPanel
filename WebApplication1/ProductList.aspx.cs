@@ -13,5 +13,14 @@ namespace WebApplication1
         {
 
         }
+
+        protected void gridProducts_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = gridProducts.Rows[e.NewEditIndex];
+
+            int rowId = Convert.ToInt32(row.Cells[1].Text);
+
+            Response.Redirect("~/ManagementProduct.aspx?id=" + rowId);
+        }
     }
 }
