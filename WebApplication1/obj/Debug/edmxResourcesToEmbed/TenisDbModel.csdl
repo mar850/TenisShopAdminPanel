@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TenisDbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TenisDbEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Carts" EntityType="TenisDbModel.Cart" />
+    <EntitySet Name="Products" EntityType="TenisDbModel.Product" />
+    <EntitySet Name="ProductTypes" EntityType="TenisDbModel.ProductType" />
+    <AssociationSet Name="FK_Cart_Product" Association="TenisDbModel.FK_Cart_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductTypes" Association="TenisDbModel.FK_Product_ProductTypes">
+      <End Role="ProductTypes" EntitySet="ProductTypes" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="DatePurchased" Type="DateTime" Precision="3" />
+    <Property Name="IsInCart" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="TenisDbModel.FK_Cart_Product" FromRole="Cart" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Image" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Carts" Relationship="TenisDbModel.FK_Cart_Product" FromRole="Product" ToRole="Cart" />
+    <NavigationProperty Name="ProductType" Relationship="TenisDbModel.FK_Product_ProductTypes" FromRole="Product" ToRole="ProductTypes" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Products" Relationship="TenisDbModel.FK_Product_ProductTypes" FromRole="ProductTypes" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_Cart_Product">
+    <End Role="Product" Type="TenisDbModel.Product" Multiplicity="1" />
+    <End Role="Cart" Type="TenisDbModel.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductTypes">
+    <End Role="ProductTypes" Type="TenisDbModel.ProductType" Multiplicity="1" />
+    <End Role="Product" Type="TenisDbModel.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
